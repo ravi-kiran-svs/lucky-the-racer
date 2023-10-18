@@ -532,9 +532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e58f71ae8fa0b648bd8c5b0313fb831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vMax: 30
-  acc: 30
-  turning: 100
+  topSpeed: 30
+  forwardAcc: 30
+  turnControl: 100
   speedText: {fileID: 54483956}
 --- !u!54 &824350209
 Rigidbody:
