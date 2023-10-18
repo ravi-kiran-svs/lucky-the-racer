@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2289665872876348569}
+  - component: {fileID: 6685113493358365658}
+  - component: {fileID: 609067068075053033}
   m_Layer: 0
   m_Name: RoadUp
   m_TagString: Untagged
@@ -33,6 +35,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 225, z: 0}
+--- !u!64 &6685113493358365658
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480934781814406691}
+  m_Material: {fileID: 13400000, guid: 16d42bd5cd6ea49479b21c96b6ac0bf5, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5965522986914805997, guid: 4b2615c500cef6348b244c4198730da1, type: 3}
+--- !u!64 &609067068075053033
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480934781814406691}
+  m_Material: {fileID: 13400000, guid: def3b5ccf31d0a74bb301a53f9e42231, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2796234042848120698, guid: d95d90eaa0919374894dc3579cb9a8d4, type: 3}
 --- !u!1 &3970166707849179036
 GameObject:
   m_ObjectHideFlags: 0

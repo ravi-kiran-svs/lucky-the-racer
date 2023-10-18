@@ -46,7 +46,7 @@ public class Car : MonoBehaviour {
     }
 
     private void Update() {
-        speedText.text = ((int)rigid.velocity.magnitude).ToString();
+        //speedText.text = ((int)rigid.velocity.magnitude).ToString();
     }
 
 }
