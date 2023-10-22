@@ -7,6 +7,8 @@ public class RacerView : MonoBehaviour {
 
     private RacerController controller;
 
+    [SerializeField] public Transform camFollow;
+
     public void SetController(RacerController racerController) {
         controller = racerController;
     }
@@ -19,6 +21,10 @@ public class RacerView : MonoBehaviour {
 
     private void Update() {
         if (controller != null) {
+            controller.keys.forward = Input.GetKey(KeyCode.UpArrow);
+            controller.keys.bacward = Input.GetKey(KeyCode.DownArrow);
+            controller.keys.hori = Input.GetAxis("Horizontal");
+
             controller.Ping();
         }
     }

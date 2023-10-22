@@ -7,45 +7,43 @@ public class RacerController {
     // part of RacerModel
     [SerializeField] private float topSpeed = 30;
     [SerializeField] private float forwardAcc = 30;
-    [SerializeField] private float turnControl = 100;
-
-    private float revRatio = 0.7f;
-    private float turnThresholdVel = 0;
-
-    private Rigidbody rigid;
+    [SerializeField] private float turnControl = 50;
 
     // private RacerModel model;
     private RacerView view;
 
+    public RacerKeys keys = new RacerKeys();
+    private float revRatio = 0.7f;
+    private float turnThresholdVel = 10;
+
+    private Rigidbody rigid;
+
     public RacerController(RacerView racerView) {
         view = racerView;
         racerView.SetController(this);
+        Cam.Instance.SetFollow(view.camFollow);
         rigid = view.GetComponent<Rigidbody>();
     }
 
     public void PhysicsPing() {
-        // this handles forward acceleration.
-        /*if (Input.GetKey(KeyCode.UpArrow)) {
+        Cam.Instance.vibrate = keys.forward && keys.bacward;
+
+        if (keys.forward && !keys.bacward) {
             if (rigid.velocity.magnitude < topSpeed) {
-                rigid.AddForce(transform.forward * forwardAcc, ForceMode.Acceleration);
+                rigid.AddForce(view.transform.forward * forwardAcc, ForceMode.Acceleration);
+            }
+
+        } else if (keys.bacward && !keys.forward) {
+            if (rigid.velocity.magnitude < topSpeed * revRatio || Vector3.Dot(view.transform.forward, rigid.velocity) >= 0) {
+                rigid.AddForce(forwardAcc * revRatio * -view.transform.forward, ForceMode.Acceleration);
             }
         }
 
-        // this handles backward movement
-        if (Input.GetKey(KeyCode.DownArrow)) {
-            if (rigid.velocity.magnitude < topSpeed * revRatio || Vector3.Dot(transform.forward, rigid.velocity) >= 0) {
-                rigid.AddForce(-transform.forward * forwardAcc * revRatio, ForceMode.Acceleration);
-            }
-        }
-
-        // this handles turning.
-        float dir = Input.GetAxis("Horizontal");
-        if (rigid.velocity.magnitude > turnThresholdVel) {
-            transform.Rotate(transform.up, turnControl * dir * Time.deltaTime);
-        }
+        float dir = Mathf.Clamp(Vector3.Dot(view.transform.forward, rigid.velocity) / turnThresholdVel, -1, 1);
+        view.transform.Rotate(view.transform.up, turnControl * keys.hori * Time.deltaTime * dir);
 
         // this negates the sideward velocity during turning.
-        rigid.velocity -= transform.right * Vector3.Dot(transform.right, rigid.velocity);*/
+        rigid.velocity -= view.transform.right * Vector3.Dot(view.transform.right, rigid.velocity);
     }
 
     public void Ping() {
