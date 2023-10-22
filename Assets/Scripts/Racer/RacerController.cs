@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class Racer : MonoBehaviour {
+public class RacerController {
 
+    // part of RacerModel
     [SerializeField] private float topSpeed = 30;
     [SerializeField] private float forwardAcc = 30;
     [SerializeField] private float turnControl = 100;
@@ -12,17 +12,20 @@ public class Racer : MonoBehaviour {
     private float revRatio = 0.7f;
     private float turnThresholdVel = 0;
 
-    [SerializeField] private TextMeshProUGUI speedText;
-
     private Rigidbody rigid;
 
-    private void Awake() {
-        rigid = GetComponent<Rigidbody>();
+    // private RacerModel model;
+    private RacerView view;
+
+    public RacerController(RacerView racerView) {
+        view = racerView;
+        racerView.SetController(this);
+        rigid = view.GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate() {
+    public void PhysicsPing() {
         // this handles forward acceleration.
-        if (Input.GetKey(KeyCode.UpArrow)) {
+        /*if (Input.GetKey(KeyCode.UpArrow)) {
             if (rigid.velocity.magnitude < topSpeed) {
                 rigid.AddForce(transform.forward * forwardAcc, ForceMode.Acceleration);
             }
@@ -42,11 +45,10 @@ public class Racer : MonoBehaviour {
         }
 
         // this negates the sideward velocity during turning.
-        rigid.velocity -= transform.right * Vector3.Dot(transform.right, rigid.velocity);
+        rigid.velocity -= transform.right * Vector3.Dot(transform.right, rigid.velocity);*/
     }
 
-    private void Update() {
+    public void Ping() {
         //speedText.text = ((int)rigid.velocity.magnitude).ToString();
     }
-
 }
