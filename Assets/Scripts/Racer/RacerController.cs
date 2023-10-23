@@ -10,6 +10,7 @@ public class RacerController {
     public RacerKeys keys = new RacerKeys();
     private float revRatio = 0.7f;
     private float turnThresholdVel = 10;
+    private float speedUIThreshold = 10;
 
     private Rigidbody rigid;
 
@@ -43,6 +44,14 @@ public class RacerController {
     }
 
     public void Ping() {
-        //speedText.text = ((int)rigid.velocity.magnitude).ToString();
+        int speed = (int)(Vector3.Dot(view.transform.forward, rigid.velocity) * 2) * 5;
+        if (model.topSpeed * 10 - speed < speedUIThreshold) {
+            speed = (int)(model.topSpeed * 10);
+        }
+        if (speed < 0) {
+            speed *= -1;
+        }
+
+        view.speedText.text = speed.ToString();
     }
 }

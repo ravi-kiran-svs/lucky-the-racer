@@ -8,6 +8,7 @@ public class RacerView : MonoBehaviour {
     private RacerController controller;
 
     [SerializeField] public Transform camFollow;
+    [SerializeField] public TextMeshProUGUI speedText;
 
     public void SetController(RacerController racerController) {
         controller = racerController;
