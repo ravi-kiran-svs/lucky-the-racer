@@ -19,8 +19,8 @@ public class RacerService : MonoSingleton<RacerService> {
 
     public void SpawnRacer() {
         Transform p = spawnPoints.GetChild(0);
-        RacerModel model = racerModels[2];
-        RacerView view = Instantiate(racerViews[2], p.position, p.rotation, transform);
+        RacerModel model = racerModels[3];
+        RacerView view = Instantiate(racerViews[3], p.position, p.rotation, transform);
         RacerController controller = new RacerController(model, view);
     }
 
