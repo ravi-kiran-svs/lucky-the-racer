@@ -6,6 +6,10 @@ public class RacerService : MonoSingleton<RacerService> {
 
     [SerializeField] private RacerView[] racerViews;
 
+    [SerializeField] private RacerModel[] racerModels;
+
+    [SerializeField] private Transform spawnPoints;
+
     private void Start() {
         // remove later
         Destroy(transform.GetChild(0).gameObject);
@@ -14,8 +18,10 @@ public class RacerService : MonoSingleton<RacerService> {
     }
 
     public void SpawnRacer() {
-        RacerView view = Instantiate(racerViews[0], transform);
-        RacerController controller = new RacerController(view);
+        Transform p = spawnPoints.GetChild(0);
+        RacerModel model = racerModels[0];
+        RacerView view = Instantiate(racerViews[0], p.position, p.rotation, transform);
+        RacerController controller = new RacerController(model, view);
     }
 
 }
