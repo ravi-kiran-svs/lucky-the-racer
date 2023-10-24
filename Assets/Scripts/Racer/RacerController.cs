@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,5 +54,9 @@ public class RacerController {
         }
 
         view.speedText.text = speed.ToString();
+    }
+
+    public void DestroySelf() {
+        GameObject.Destroy(view.gameObject);
     }
 }
