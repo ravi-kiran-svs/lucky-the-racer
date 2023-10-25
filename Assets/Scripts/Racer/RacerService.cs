@@ -16,15 +16,8 @@ public class RacerService : MonoSingleton<RacerService> {
         SpawnRacer(0);
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            SwitchRacer(Random.Range(0, 4));
-        }
-    }
-
-    private void SwitchRacer(int id) {
+    public void SwitchRacer(int id) {
         currentRacer.DestroySelf();
-
         SpawnRacer(id);
     }
 
