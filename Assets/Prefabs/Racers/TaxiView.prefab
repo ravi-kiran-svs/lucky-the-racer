@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 7791283317335902381}
   m_Layer: 0
   m_Name: TaxiView
-  m_TagString: Untagged
+  m_TagString: Racer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

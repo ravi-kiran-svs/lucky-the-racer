@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class SwitchRacerMenu : MonoSingleton<SwitchRacerMenu> {
 
-    public event Action<RacerModel> OnMenuOpen;
-    public event Action OnMenuClose;
-
     private bool menuOn = false;
 
     [SerializeField] private GameObject menuText;
@@ -17,13 +14,14 @@ public class SwitchRacerMenu : MonoSingleton<SwitchRacerMenu> {
         if (Input.GetKeyDown(KeyCode.Tab) && !menuOn) {
             OpenMenu();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && menuOn) {
+            CloseMenu();
+        }
     }
 
     private void OpenMenu() {
         Time.timeScale = 0;
-
-        OnMenuOpen?.Invoke(RacerService.Instance.GetCurrentRacerStats());
-
         menuText.SetActive(false);
         menuBox.SetActive(true);
         menuOn = true;
@@ -33,9 +31,6 @@ public class SwitchRacerMenu : MonoSingleton<SwitchRacerMenu> {
         menuText.SetActive(true);
         menuBox.SetActive(false);
         menuOn = false;
-
-        OnMenuClose?.Invoke();
-
         Time.timeScale = 1;
     }
 

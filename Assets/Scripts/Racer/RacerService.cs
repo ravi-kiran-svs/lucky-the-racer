@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RacerService : MonoSingleton<RacerService> {
+
+    public event Action<RacerModel> OnNewRacer;
 
     [SerializeField] private RacerView[] racerViews;
 
@@ -27,6 +30,8 @@ public class RacerService : MonoSingleton<RacerService> {
         RacerModel model = config.model;
         RacerView view = Instantiate(config.view, p.position, p.rotation, transform);
         currentRacer = new RacerController(model, view);
+
+        OnNewRacer?.Invoke(model);
     }
 
     public RacerModel GetCurrentRacerStats() {

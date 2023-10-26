@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 3898265284176623706}
   m_Layer: 0
   m_Name: RacerView
-  m_TagString: Untagged
+  m_TagString: Racer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
