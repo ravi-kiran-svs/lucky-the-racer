@@ -12,9 +12,10 @@ public class RacerMenuButton : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI[] compareTexts;
 
     private void Start() {
-        SetSliders();
-
         SwitchRacerMenu.Instance.OnMenuOpen += SetCompares;
+
+        SetSliders();
+        SetCompares(RacerService.Instance.GetCurrentRacerStats());
     }
 
     private void SetSliders() {

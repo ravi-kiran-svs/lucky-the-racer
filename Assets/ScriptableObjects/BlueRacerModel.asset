@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60007587591c6614a8023865d535e7f9, type: 3}
   m_Name: BlueRacerModel
   m_EditorClassIdentifier: 
-  topSpeed: 35
+  topSpeed: 40
   forwardAcc: 25
-  turnControl: 60
+  turnControl: 55

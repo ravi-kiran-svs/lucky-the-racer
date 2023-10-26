@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60007587591c6614a8023865d535e7f9, type: 3}
   m_Name: TruckerModel
   m_EditorClassIdentifier: 
-  topSpeed: 15
-  forwardAcc: 15
-  turnControl: 25
+  topSpeed: 20
+  forwardAcc: 25
+  turnControl: 70
