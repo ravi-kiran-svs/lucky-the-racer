@@ -2140,6 +2140,7 @@ GameObject:
   - component: {fileID: 6621051931538814761}
   - component: {fileID: 6621051931538814762}
   - component: {fileID: 6621051931538814763}
+  - component: {fileID: 5929966032140641859}
   m_Layer: 5
   m_Name: SelectRacerMenuButton
   m_TagString: Untagged
@@ -2264,6 +2265,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5929966032140641859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6621051931538814805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8838a3922a1827e48a9f607f456d07d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  sliders:
+  - {fileID: 6621051930308289257}
+  - {fileID: 6621051931028398551}
+  - {fileID: 6621051931508777078}
 --- !u!1 &6621051931586737302
 GameObject:
   m_ObjectHideFlags: 0
