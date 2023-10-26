@@ -59,4 +59,8 @@ public class RacerController {
     public void DestroySelf() {
         GameObject.Destroy(view.gameObject);
     }
+
+    public RacerModel GetStats() {
+        return model;
+    }
 }

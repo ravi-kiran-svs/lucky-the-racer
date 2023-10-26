@@ -2282,6 +2282,10 @@ MonoBehaviour:
   - {fileID: 6621051930308289257}
   - {fileID: 6621051931028398551}
   - {fileID: 6621051931508777078}
+  compareTexts:
+  - {fileID: 6621051930230681943}
+  - {fileID: 6621051930315770418}
+  - {fileID: 6621051930130547958}
 --- !u!1 &6621051931586737302
 GameObject:
   m_ObjectHideFlags: 0

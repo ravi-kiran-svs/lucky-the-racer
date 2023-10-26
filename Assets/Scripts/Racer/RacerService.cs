@@ -29,4 +29,8 @@ public class RacerService : MonoSingleton<RacerService> {
         currentRacer = new RacerController(model, view);
     }
 
+    public RacerModel GetCurrentRacerStats() {
+        return currentRacer.GetStats();
+    }
+
 }
