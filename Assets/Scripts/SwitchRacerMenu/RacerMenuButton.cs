@@ -15,7 +15,7 @@ public class RacerMenuButton : MonoBehaviour {
         RacerService.Instance.OnNewRacer += SetCompares;
 
         SetSliders();
-        SetCompares(RacerService.Instance.GetCurrentRacerStats());
+        SetCompares(0, RacerService.Instance.GetCurrentRacerStats());
     }
 
     private void SetSliders() {
@@ -24,7 +24,7 @@ public class RacerMenuButton : MonoBehaviour {
         sliders[2].value = Mathf.InverseLerp(0, 100, stats.turnControl);
     }
 
-    private void SetCompares(RacerModel currentRacer) {
+    private void SetCompares(int id, RacerModel currentRacer) {
         float compare = stats.topSpeed - currentRacer.topSpeed;
         if (compare > 0) {
             compareTexts[0].text = "+" + compare.ToString();

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RacerService : MonoSingleton<RacerService> {
 
-    public event Action<RacerModel> OnNewRacer;
+    public event Action<int, RacerModel> OnNewRacer;
 
     [SerializeField] private RacerView[] racerViews;
 
@@ -13,6 +13,7 @@ public class RacerService : MonoSingleton<RacerService> {
 
     [SerializeField] private Transform spawnPoints;
 
+    private int currentID;
     private RacerController currentRacer;
 
     private void Start() {
@@ -30,12 +31,17 @@ public class RacerService : MonoSingleton<RacerService> {
         RacerModel model = config.model;
         RacerView view = Instantiate(config.view, p.position, p.rotation, transform);
         currentRacer = new RacerController(model, view);
+        currentID = id;
 
-        OnNewRacer?.Invoke(model);
+        OnNewRacer?.Invoke(id, model);
     }
 
     public RacerModel GetCurrentRacerStats() {
         return currentRacer.GetStats();
+    }
+
+    public int GetCurrentRacerID() {
+        return currentID;
     }
 
 }

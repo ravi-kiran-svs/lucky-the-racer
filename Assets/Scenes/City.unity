@@ -13190,6 +13190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JeepFake
       objectReference: {fileID: 0}
+    - target: {fileID: 5648576221650768117, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6195114418304311551, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
       propertyPath: m_SizeDelta.x
       value: 300
