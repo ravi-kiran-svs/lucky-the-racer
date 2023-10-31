@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PoliceService : MonoSingleton<PoliceService> {
+
+    public event Action OnPoliceCarDead;
 
     [SerializeField] PoliceView prefabs;
 
@@ -21,6 +24,7 @@ public class PoliceService : MonoSingleton<PoliceService> {
     }
 
     private void OnPoliceDeath(int id) {
+        OnPoliceCarDead?.Invoke();
         StartCoroutine(SpawnPoliceCarAt(id, transform.GetChild(id), 5));
     }
 
