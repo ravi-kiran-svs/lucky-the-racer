@@ -11,7 +11,7 @@ public class SwitchRacerMenu : MonoSingleton<SwitchRacerMenu> {
     [SerializeField] private GameObject menuBox;
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Tab) && !menuOn) {
+        if (Input.GetKeyDown(KeyCode.Tab) && !menuOn && !ScoreAndTimer.Instance.isGameOver) {
             OpenMenu();
         }
 
