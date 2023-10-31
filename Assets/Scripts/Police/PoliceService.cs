@@ -8,12 +8,20 @@ public class PoliceService : MonoSingleton<PoliceService> {
 
     private void Start() {
         for (int i = 0; i < transform.childCount; i++) {
-            SpawnPoliceCarAt(transform.GetChild(i));
+            StartCoroutine(SpawnPoliceCarAt(i, transform.GetChild(i), 0));
         }
     }
 
-    private void SpawnPoliceCarAt(Transform parent) {
-        Instantiate(prefabs, parent.position, parent.rotation, parent);
+    private IEnumerator SpawnPoliceCarAt(int id, Transform parent, int time) {
+        yield return new WaitForSeconds(time);
+        PoliceView view = Instantiate(prefabs, parent.position, parent.rotation, parent);
+
+        view.id = id;
+        view.OnDeath += OnPoliceDeath;
+    }
+
+    private void OnPoliceDeath(int id) {
+        StartCoroutine(SpawnPoliceCarAt(id, transform.GetChild(id), 5));
     }
 
 }
