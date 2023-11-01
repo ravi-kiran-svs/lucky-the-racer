@@ -7,7 +7,7 @@ public class PoliceService : MonoSingleton<PoliceService> {
 
     public event Action OnPoliceCarDead;
 
-    [SerializeField] PoliceView prefabs;
+    [SerializeField] PoliceView[] prefabs;
 
     private void Start() {
         for (int i = 0; i < transform.childCount; i++) {
@@ -17,7 +17,7 @@ public class PoliceService : MonoSingleton<PoliceService> {
 
     private IEnumerator SpawnPoliceCarAt(int id, Transform parent, int time) {
         yield return new WaitForSeconds(time);
-        PoliceView view = Instantiate(prefabs, parent.position, parent.rotation, parent);
+        PoliceView view = Instantiate(prefabs[UnityEngine.Random.Range(0, 2)], parent.position, parent.rotation, parent);
 
         view.id = id;
         view.OnDeath += OnPoliceDeath;
