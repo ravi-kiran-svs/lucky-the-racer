@@ -54,6 +54,8 @@ public class RacerController {
         }
 
         view.speedText.text = speed.ToString();
+
+        view.engineSound.volume = Mathf.Lerp(0.1f, 0.3f, Mathf.InverseLerp(0, model.topSpeed * 10, speed));
     }
 
     public void DestroySelf() {

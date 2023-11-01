@@ -9,6 +9,11 @@ public class RacerView : MonoBehaviour {
 
     [SerializeField] public Transform camFollow;
     [SerializeField] public TextMeshProUGUI speedText;
+    public AudioSource engineSound;
+
+    private void Start() {
+        engineSound = GetComponent<AudioSource>();
+    }
 
     public void SetController(RacerController racerController) {
         controller = racerController;

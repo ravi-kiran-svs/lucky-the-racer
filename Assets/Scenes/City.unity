@@ -1828,6 +1828,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7596482605809645382, guid: 7a1910034ed7845468711e474416b63a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7791283317335902376, guid: 7a1910034ed7845468711e474416b63a, type: 3}
       propertyPath: m_Name
       value: TaxiFake
@@ -2564,6 +2568,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6743897150192592371, guid: 85905cdbe1dc501419c0bd4e43fa1d19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153855649618274345, guid: 85905cdbe1dc501419c0bd4e43fa1d19, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -11056,6 +11064,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5350615482491411838, guid: 49b5268467c606146ba4cb9a6f8f8fea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5638548157084516349, guid: 49b5268467c606146ba4cb9a6f8f8fea, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -19245,6 +19257,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1904564778}
     m_Modifications:
+    - target: {fileID: 286399195991040491, guid: 64779ad95be9adb489c55a6bacc2deea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3359888966291991157, guid: 64779ad95be9adb489c55a6bacc2deea, type: 3}
       propertyPath: m_SizeDelta.x
       value: 300
@@ -20124,6 +20140,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1489303594639673670, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984481525225197555, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4801593618457744357, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
@@ -37872,6 +37892,10 @@ PrefabInstance:
     - target: {fileID: 2083429274815782375, guid: bbff3163650ef4945b07f90a34a6627d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825434189348181262, guid: bbff3163650ef4945b07f90a34a6627d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6754192057512981598, guid: bbff3163650ef4945b07f90a34a6627d, type: 3}
       propertyPath: m_IsActive
