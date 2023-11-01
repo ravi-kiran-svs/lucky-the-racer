@@ -64,7 +64,7 @@ public class ScoreAndTimer : MonoSingleton<ScoreAndTimer> {
     }
 
     public void OnReplay() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
 }

@@ -460,6 +460,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8153855649618274345, guid: 85905cdbe1dc501419c0bd4e43fa1d19, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6259143761332272975, guid: 85905cdbe1dc501419c0bd4e43fa1d19, type: 3}
     - {fileID: 6259143761332272972, guid: 85905cdbe1dc501419c0bd4e43fa1d19, type: 3}
@@ -778,6 +782,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2884946363352674015, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984481525225197555, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4983257769387100751, guid: c6928b7134051c345b7ac51c00a42542, type: 3}
@@ -2526,6 +2534,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 213052647}
     m_Modifications:
+    - target: {fileID: 286399195991040491, guid: 64779ad95be9adb489c55a6bacc2deea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3835387577407183487, guid: 64779ad95be9adb489c55a6bacc2deea, type: 3}
       propertyPath: m_Name
       value: BlueRacerView
@@ -2912,6 +2924,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7596482605809645382, guid: 7a1910034ed7845468711e474416b63a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7791283317335902376, guid: 7a1910034ed7845468711e474416b63a, type: 3}
       propertyPath: m_Name
       value: TaxiView
@@ -3209,7 +3225,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'LUCKY
 
-    <size=60%>The Racer'
+    <size=60%>The Racer
+
+    <size=20%>created by RK.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3767,6 +3785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedRacerView
       objectReference: {fileID: 0}
+    - target: {fileID: 5350615482491411838, guid: 49b5268467c606146ba4cb9a6f8f8fea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5638548157084516349, guid: 49b5268467c606146ba4cb9a6f8f8fea, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3905,6 +3927,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 880650365339481943, guid: bbff3163650ef4945b07f90a34a6627d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825434189348181262, guid: bbff3163650ef4945b07f90a34a6627d, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6996842506047869895, guid: bbff3163650ef4945b07f90a34a6627d, type: 3}
