@@ -9,7 +9,8 @@ public class PoliceController {
 
     private int id = 0;
 
-    public PoliceController(int id, PoliceModel policeModel, PoliceView policeView) {
+    public PoliceController(int locID, PoliceModel policeModel, PoliceView policeView) {
+        id = locID;
         model = policeModel;
         view = policeView;
         policeView.SetController(this);
