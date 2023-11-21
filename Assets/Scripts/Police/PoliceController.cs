@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class PoliceController {
 
-    //private PoliceModel model;
+    private PoliceModel model;
     private PoliceView view;
 
-    [SerializeField] public int id = 0;
-    [SerializeField] private float crashSpeed = 20;
-    [SerializeField] private float timeToDie = 1;
+    private int id = 0;
 
-    public PoliceController(PoliceView policeView) {
+    public PoliceController(int id, PoliceModel policeModel, PoliceView policeView) {
+        model = policeModel;
         view = policeView;
         policeView.SetController(this);
     }
 
     public void OnCollisionWithRacer(Collision collision) {
-        if (collision.relativeVelocity.magnitude >= crashSpeed) {
-            //view.Die(id, timeToDie);
-            view.StartCoroutine(view.Die(id, timeToDie));
+        if (collision.relativeVelocity.magnitude >= model.crashSpeed) {
+            view.StartCoroutine(view.Die(id, model.timeToDie));
         }
     }
 

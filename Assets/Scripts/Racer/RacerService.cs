@@ -7,10 +7,6 @@ public class RacerService : MonoSingleton<RacerService> {
 
     public event Action<int, RacerModel> OnNewRacer;
 
-    [SerializeField] private RacerView[] racerViews;
-
-    [SerializeField] private RacerModel[] racerModels;
-
     [SerializeField] private Transform spawnPoints;
 
     private int currentID;
