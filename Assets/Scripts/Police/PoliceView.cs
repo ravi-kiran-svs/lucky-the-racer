@@ -5,33 +5,33 @@ using UnityEngine;
 
 public class PoliceView : MonoBehaviour {
 
+    private PoliceController controller;
+
     public event Action<int> OnDeath;
 
     public ParticleSystem deathParticles;
     public AudioSource crashSound;
-
-    [SerializeField] public int id = 0;
-    [SerializeField] private float crashSpeed = 20;
-    [SerializeField] private float timeToDie = 1;
 
     private void Start() {
         deathParticles = GetComponent<ParticleSystem>();
         crashSound = GetComponent<AudioSource>();
     }
 
+    public void SetController(PoliceController policeController) {
+        controller = policeController;
+    }
+
     private void OnCollisionEnter(Collision collision) {
         if (collision.collider.CompareTag("Racer")) {
-            if (collision.relativeVelocity.magnitude >= crashSpeed) {
-                StartCoroutine(Die());
-            }
+            controller.OnCollisionWithRacer(collision);
         }
     }
 
-    private IEnumerator Die() {
+    public IEnumerator Die(int id, float t) {
         deathParticles.Play();
         crashSound.Play();
 
-        yield return new WaitForSeconds(timeToDie);
+        yield return new WaitForSeconds(t);
         OnDeath?.Invoke(id);
         Destroy(gameObject);
     }

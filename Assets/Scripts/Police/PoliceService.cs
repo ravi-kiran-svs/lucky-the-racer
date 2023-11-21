@@ -19,7 +19,8 @@ public class PoliceService : MonoSingleton<PoliceService> {
         yield return new WaitForSeconds(time);
         PoliceView view = Instantiate(prefabs[UnityEngine.Random.Range(0, 2)], parent.position, parent.rotation, parent);
 
-        view.id = id;
+        PoliceController controller = new PoliceController(view);
+        controller.id = id;
         view.OnDeath += OnPoliceDeath;
     }
 
